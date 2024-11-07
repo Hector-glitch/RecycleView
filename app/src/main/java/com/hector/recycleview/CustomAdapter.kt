@@ -1,3 +1,5 @@
+package com.hector.recycleview
+
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -11,7 +13,7 @@ class CustomAdapter (private val mList: List<ItemsViewModel>) : RecyclerView.Ada
         // inflates the card_view_design view
         // that is used to hold list item
         val view = LayoutInflater.from(parent.context)
-            .inflate(com.hector.recycleview.R.layout.card_view_design, parent, false)
+            .inflate(R.layout.card_view_design, parent, false)
 
         return ViewHolder(view)
     }
@@ -36,7 +38,7 @@ class CustomAdapter (private val mList: List<ItemsViewModel>) : RecyclerView.Ada
 
     // Holds the views for adding it to image and text
     class ViewHolder(ItemView: View) : RecyclerView.ViewHolder(ItemView) {
-        val imageView: ImageView = itemView.findViewById(com.hector.recycleview.R.id.imageview)
-        val textView: TextView = itemView.findViewById(com.hector.recycleview.R.id.textView)
+        val imageView: ImageView = itemView.findViewById(R.id.imageview)
+        val textView: TextView = itemView.findViewById(R.id.textView)
     }
 }
